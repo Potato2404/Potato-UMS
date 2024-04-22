@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Template</title>
+    <style>
+        :root {
+        --clr-primary: #141414;
+        --clr-secondary: #00000;
+        --clr-surface: #141414;
+        --clr-surface-muted: hsl(0, 0%, 4%);
+        --clr-surface-bright: hsl(0, 0%, 12%);
+        --clr-text: hsl(0, 0%, 85%);
+        --clr-text-muted: hsl(0, 0%, 70%);
+        --clr-text-bright: hsl(0, 0%, 97%);
+        --gradient: linear-gradient(-45deg, var(--clr-primary), var(--clr-secondary));
+        }
+        
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+        
+        * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        }
+        
+        img,
+        picture,
+        video,
+        svg {
+        display: block;
+        max-width: 100%;
+        border-radius: 5px;
+        }
+        
+        body {
+        font-family: system-ui;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        background: #681F1F;
+        color: var(--clr-text);
+        height: auto; 
+        /* Removes user select for making it easier to nav on mobile */
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        }
+        
+        h2 { /* Used for page headers */
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        }
+        
+        h3 { /* used for image description */
+        text-align: center;
+        font-size: 11px;
+        color: #484848;
+        font-style: italic;
+        }
+        
+        section {
+        padding-block: 8rem;
+        }
+        
+        .body {
+        width: min(100% - 3rem, 55rem);
+        margin-inline: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        }
+        
+        .even-columns {
+        display: grid;
+        gap: 1.5rem;
+        }
+        
+        .container {
+        height: auto;
+        background-color: #484848;
+        padding: 5px;
+        border-radius: 5px;
+        }
+        
+        /* Site header */
+        .site-header {
+        background-image: url("css/final1.jpg");
+        background-position: center;
+        background-size: cover;
+        padding: 5rem;
+        min-height: 70vh;
+        position: sticky;
+        box-shadow: 1px 0px 15px rgba(255,255,255,0.08);
+        }
+        
+        .site-header-mask {
+        position: absolute;
+        inset: 0;
+        background: rgb(0 0 0 / 0.2);
+        -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg");
+        -webkit-mask-position: center bottom;
+        -webkit-mask-size: 100%;
+        
+        }
+        
+        .site-title {
+        text-align: center;
+        font-size: clamp(3rem, 9vw + 0.4rem, 8rem);
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+        position: fixed;
+        width: 100%;
+        padding-top: 10%;
+        letter-spacing: 20px;
+        }
+        
+        ::-webkit-scrollbar {
+        width: 14px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+        background-color: crimson;
+        }
+        
+        ::-webkit-scrollbar-track {
+        background-color: #681F1F;
+        }
+        
+        html {
+        scroll-behavior: smooth;
+        }
+        
+        .text-divider {
+        --text-divider-gap: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.9375rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        }
+        
+        .text-divider::before, .text-divider::after {
+        content: '';
+        height: 1px;
+        background-color: #FFF9DE;
+        flex-grow: 1;
+        }
+        
+        .text-divider::before {
+        margin-right: var(--text-divider-gap);
+        }
+        
+        .text-divider::after {
+        margin-left: var(--text-divider-gap);
+        }
+
+    </style>
+    <style>
+   .btn{
+   display: inline-block;
+   padding:5px 20px;
+   font-size: 20px;
+   background: crimson;
+   color:#FFF9DE;
+   text-transform: capitalize;
+   border-radius: 5px;
+   text-align: center;
+   text-decoration: none;
+   margin-top: 20px;
+   }
+   </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-mask">
+            <h1 class="site-title" style="color: #FFF9DE; margin-top: 20px;"><span style="color: crimson; ">p</span>otato <span style="color: crimson; ">l</span>ino</h1>
+        </div>
+    </header>
+    <main>
+        <div class="body">
+            <div class="text-divider" style="margin-top: 25px;">
+                <h2 style="color: #FFF9DE;"><span style="color: crimson; ">S</span>ummary</h2>
+                <p style="color: #FFF9DE;">of my <span style="color: crimson; ">u</span>ser <span style="color: crimson; ">M</span>anagement <span style="color: crimson; ">S</span>ystem</p>
+            </div>
+            <p style="text-align: justify; margin-top: 50px; color: #FFF9DE;">
+                This website serves as a comprehensive user management system designed to streamline and optimize administrative tasks associated with user data. With a user-friendly interface and robust functionality, it empowers administrators to efficiently manage user accounts, permissions, and information. From creating new user profiles to updating existing data and managing access privileges, this system provides a centralized platform for overseeing all aspects of user management. By automating routine tasks and providing valuable insights through analytics and reporting features, it enhances productivity and decision-making. Whether it's managing user authentication, tracking user activity, or ensuring data security and compliance, this system offers a versatile solution tailored to the needs of modern organizations. With its scalability, customizability, and reliability, it serves as a vital tool for organizations of all sizes, helping them effectively manage their user ecosystem and drive operational excellence.
+            </p>
+            <a href="login.php" class="btn">Login</a>
+            <a href="register_form.php" class="btn">Create account</a>
+        </div>
+    </main>
+    <script>
+        function navbarToggle(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+</html>
